@@ -1,4 +1,5 @@
 /**
+ * [Two Pointers Algorithm]
  * 공통 원소 구하기
  * @param {Array} arr1 배열1
  * @param {Array} arr2 배열2

@@ -1,4 +1,5 @@
 /**
+ * [Two Pointers Algorithm]
  * 연속 부분 수열
  * @param {number} m 특정 숫자 m
  * @param {Array} arr n개의 수로 이루어진 수열

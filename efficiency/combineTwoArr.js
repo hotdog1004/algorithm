@@ -1,4 +1,5 @@
 /**
+ * [Two Pointers Algorithm]
  * 두 배열 합치기
  * @param {Array} arr1 오름차순으로 정렬된 배열1
  * @param {Array} arr2 오름차순으로 정렬된 배열2
