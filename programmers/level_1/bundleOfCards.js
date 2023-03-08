@@ -1,7 +1,9 @@
 /**
  * 카드 뭉치
- * @param {Array} babbling 
- * @returns {number} 
+ * @param {Array} cards1 
+ * @param {Array} cards2 
+ * @param {Array} goal 
+ * @returns {string} 
  * 코니는 영어 단어가 적힌 카드 뭉치 두 개를 선물로 받았습니다. 
  * 코니는 다음과 같은 규칙으로 카드에 적힌 단어들을 사용해 원하는 순서의 단어 배열을 만들 수 있는지 알고 싶습니다.
  * 원하는 카드 뭉치에서 카드를 순서대로 한 장씩 사용합니다.
