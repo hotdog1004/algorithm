@@ -24,15 +24,20 @@ function solution(board, moves) {
   const stack = [];
   let answer = 0;
   for(pos of moves){
+    // index 번호 맞춰주기 위해 -1
     pos -= 1;
     for(let i = 0; i < board.length; i++){
       if(board[i][pos] !== 0){
         let tmp = board[i][pos];
+        // 꺼내고난 다음엔 해당 인덱스의 값은 0으로 변경
         board[i][pos] = 0;
         if(tmp == stack[stack.length -1]){
           stack.pop();
           answer+=2;
-        }else stack.push(tmp);
+        }
+        else stack.push(tmp);
+
+        // 꺼낸 값이 0이 아니면 반복문이 한번만 돌고 멈추게 break 추가
         break;
       }
     }
@@ -40,7 +45,12 @@ function solution(board, moves) {
   return answer;
 }
 
-const board = [[0,0,0,0,0],[0,0,1,0,3],[0,2,5,0,1],[4,2,4,4,2],[3,5,1,3,1]];
+const board = 
+[[0,0,0,0,0]
+,[0,0,1,0,3]
+,[0,2,5,0,1]
+,[4,2,4,4,2]
+,[3,5,1,3,1]];
 const moves = [1, 5, 3, 5, 1, 2, 1, 4];
 
 console.log(solution(board, moves))
