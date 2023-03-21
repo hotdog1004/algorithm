@@ -10,8 +10,7 @@
 function solution(numbers) {
   let size = numbers.length-1;
   
-  while(size >= 2){
-    // 안쪽 반복문은 i < size보다 i < size-1 해주는게 반복의 횟수를 줄일 수 있음.
+  while(size >= 1){
     for(let i = 0; i < size; i++){
       if(numbers[i] > numbers[i+1]) [numbers[i], numbers[i+1]] = [numbers[i+1], numbers[i]];
     }
@@ -25,11 +24,12 @@ function otherSolution(numbers) {
   for(let i = 0; i < numbers.length-1; i++){
     for(let j = 0; j < numbers.length-i-1; j++){
       // 앞에 있는 값이 뒤에 있는 값보다 크다면 교환. 큰 값을 뒤로 배치한다.
-      if(numbers[i] > numbers[i+1]) [numbers[i], numbers[i+1]] = [numbers[i+1], numbers[i]];
+      if(numbers[j] > numbers[j+1]) [numbers[j], numbers[j+1]] = [numbers[j+1], numbers[j]];
     }
   }
   return answer;
 }
 
 const numbers = [13,5,11,7,23,15];
+
 console.log(solution(numbers))
