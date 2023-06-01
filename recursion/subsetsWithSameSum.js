@@ -17,16 +17,14 @@ function solution(arr) {
 
   let answer = "NO";
   // 두 부분집합이 합이 같은 경우엔 flag의 값을 1로 만들어서 더 이상 진행되지 않도록 처리
-  let flag = 0;
   let total = arr.reduce((a, b) => a + b, 0);
   let n = arr.length;
 
   const DFS = (L, sum) => {
-    if (flag === 1) return;
+    if (answer === "YES") return;
     if (L === n) {
       if (total - sum === sum) {
         answer = "YES";
-        flag = 1;
       }
     } else {
       DFS(L + 1, sum + arr[L]); // 적용한 케이스
