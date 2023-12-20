@@ -30,4 +30,19 @@ function solution(s) {
   return [changedCnt, removedCnt];
 }
 
-console.log(solution("110010101001"));
+function solution1(s) {
+  let changedCnt = 0;
+  let removedCnt = 0;
+  while (s !== "1") {
+    changedCnt++;
+    let zero = 0;
+    for (let i of s) {
+      if (i === "0") zero++;
+    }
+    removedCnt += zero;
+    s = (s.length - zero).toString(2);
+  }
+  return [changedCnt, removedCnt];
+}
+
+console.log(solution1("110010101001"));
